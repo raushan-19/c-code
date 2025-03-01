@@ -1,19 +1,16 @@
-// print the first 'n' fibonacci number
+// print the first 10  fibonacci number
 #include <stdio.h>
 int main()
 {
-    int n;
-    printf("enter the number ");
-    scanf("%d", &n);
-    int a = 1;
-    int b = 1;
-    int sum = 1;
-    for (int i = 1; i <= n-2 ; i++)
-    {       
-        sum = b + a;
-        a = b;
-        b = sum; 
-        printf("The %dth fibonacci term is %d", i, sum);  
-    }    
+    int n1 = 0, n2 = 1, nextterm, i;
+    printf("the 1st 10 fibonacci numbers are : ");
+    printf("\n%d\n%d\n", n1, n2);
+    for (i = 3; i <= 10; i++)
+    {
+        nextterm = n1 + n2;
+        printf("%d \n", nextterm);
+        n1 = n2;
+        n2 = nextterm;
+    }
     return 0;
 }
